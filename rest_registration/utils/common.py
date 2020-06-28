@@ -1,9 +1,10 @@
-from typing import Any, Callable, Union
+from typing import Callable, TypeVar, Union
 
 LazyBool = Callable[[], bool]
+_T = TypeVar('_T')
 
 
-def identity(value: Any) -> Any:
+def identity(value: _T) -> _T:
     return value
 
 
